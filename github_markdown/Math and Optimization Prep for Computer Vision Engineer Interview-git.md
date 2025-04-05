@@ -19,17 +19,17 @@ This markdown document includes 20 whiteboard-style problems and answers, coveri
 
 </div>
 
-![Pasted image 20250404095619.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095619.png)
+![Pasted image 20250404095619.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095619.png)
 
-![Pasted image 20250404095640.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095640.png)
-![Pasted image 20250404095654.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095654.png)
+![Pasted image 20250404095640.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095640.png)
+![Pasted image 20250404095654.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095654.png)
 
-![Pasted image 20250404095729.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095729.png)
+![Pasted image 20250404095729.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095729.png)
 
-![Pasted image 20250404095754.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095754.png)
+![Pasted image 20250404095754.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095754.png)
 
 关于 公式7.44：first-order Taylor expansion
-![Pasted image 20250404133440.png](3D_Vision_Interview_questions/Pasted%20image%2020250404133440.png)
+![Pasted image 20250404133440.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404133440.png)
 
 
 ---
@@ -40,11 +40,11 @@ This markdown document includes 20 whiteboard-style problems and answers, coveri
 ****Problem:**** How to handle significant distortion in pose estimation?  
 
 ****Answer:**** Use distortion-aware model (e.g., radial-tangential) and optimize using LM.
-![Pasted image 20250404152529.png](3D_Vision_Interview_questions/Pasted%20image%2020250404152529.png)
-  ![Pasted image 20250404152449.png](3D_Vision_Interview_questions/Pasted%20image%2020250404152449.png)
+![Pasted image 20250404152529.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404152529.png)
+  ![Pasted image 20250404152449.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404152449.png)
   
-![Pasted image 20250404152510.png](3D_Vision_Interview_questions/Pasted%20image%2020250404152510.png)
-![Pasted image 20250404153051.png](3D_Vision_Interview_questions/Pasted%20image%2020250404153051.png)
+![Pasted image 20250404152510.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404152510.png)
+![Pasted image 20250404153051.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404153051.png)
 
 ##### Undisort the image first. 
 
@@ -152,11 +152,11 @@ T \leftarrow \exp(\delta\xi^\wedge) T
 ****Problem:**** What does the function look like?  
 
 ****Answer:****  
-  ![Pasted image 20250404104752.png](3D_Vision_Interview_questions/Pasted%20image%2020250404104752.png)
+  ![Pasted image 20250404104752.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404104752.png)
 
 李群上表示：
 
-![Pasted image 20250404110516.png](3D_Vision_Interview_questions/Pasted%20image%2020250404110516.png)
+![Pasted image 20250404110516.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404110516.png)
 #### SE(3)
 Let's break down why the upper right element of the matrix exponential `exp(ξ^)` is as shown. The matrix `ξ^` is likely a 4x4 matrix in the form used in rigid body transformations, where the upper left 3x3 block represents an angular velocity and the upper right 3x1 block represents a linear velocity.
 
@@ -223,8 +223,8 @@ Notice that the power of `φ^` in each term of our derived "Upper Right" block i
 Therefore, the upper right block of the exponential of `ξ^` is indeed `Σ (1/(n+1)!) (φ^)^n ρ`. This form arises naturally from the matrix exponential series when `ξ^` has the specific block structure shown (or a related form depending on the exact definition of `ξ^` used in your context, which seems to be related to twist coordinates in screw theory or Lie group exponentials for rigid body motion).
 
 The structure of `ξ^` and the properties of the matrix exponential lead to this specific form in the upper right block, which is related to the integrated effect of the angular velocity on the linear velocity over the "time" parameter (which is often represented by `θ` or `φ` in rotation contexts). This is also connected to the concept of the **Jacobian of the exponential map** in Lie group theory.
-![Pasted image 20250404125526.png](3D_Vision_Interview_questions/Pasted%20image%2020250404125526.png)
-![Pasted image 20250404132836.png](3D_Vision_Interview_questions/Pasted%20image%2020250404132836.png)
+![Pasted image 20250404125526.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404125526.png)
+![Pasted image 20250404132836.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404132836.png)
 ## 📷 Calibration
 
   
@@ -275,11 +275,11 @@ T_{W}^{I}(t) = T_{IC} \cdot T_{W}^{C}(t)
 
 ****Answer:****  
 
-  ![Pasted image 20250404161646.png](3D_Vision_Interview_questions/Pasted%20image%2020250404161646.png)
-  ![Pasted image 20250404163634.png](3D_Vision_Interview_questions/Pasted%20image%2020250404163634.png)
-  ![Pasted image 20250404163707.png](3D_Vision_Interview_questions/Pasted%20image%2020250404163707.png)
-  ![Pasted image 20250404163839.png](3D_Vision_Interview_questions/Pasted%20image%2020250404163839.png)
-  ![Pasted image 20250404171938.png](3D_Vision_Interview_questions/Pasted%20image%2020250404171938.png)
+  ![Pasted image 20250404161646.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404161646.png)
+  ![Pasted image 20250404163634.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404163634.png)
+  ![Pasted image 20250404163707.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404163707.png)
+  ![Pasted image 20250404163839.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404163839.png)
+  ![Pasted image 20250404171938.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404171938.png)
   
 
 <div class="math">
@@ -476,17 +476,17 @@ S = A - BC^{-1}B^T
 ---
 
 ### 21.  Bundle Adjustment
-  ![Pasted image 20250404095619.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095619.png)
+  ![Pasted image 20250404095619.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095619.png)
 
 ---
 
-  ![Pasted image 20250404095640.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095640.png)
-![Pasted image 20250404095654.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095654.png)
-![Pasted image 20250404095729.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095729.png)
-![Pasted image 20250404095754.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095754.png)
-![Pasted image 20250404095812.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095812.png)
+  ![Pasted image 20250404095640.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095640.png)
+![Pasted image 20250404095654.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095654.png)
+![Pasted image 20250404095729.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095729.png)
+![Pasted image 20250404095754.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095754.png)
+![Pasted image 20250404095812.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095812.png)
 
-![Pasted image 20250404095828.png](3D_Vision_Interview_questions/Pasted%20image%2020250404095828.png)
+![Pasted image 20250404095828.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404095828.png)
 
 ### 22.  李群和李代数
 
@@ -494,27 +494,27 @@ S = A - BC^{-1}B^T
 A skew-symmetric matrix transforms a cross product into a matrix multiplication.
 
 
-![Pasted image 20250404105553.png](3D_Vision_Interview_questions/Pasted%20image%2020250404105553.png)
-![Pasted image 20250404105635.png](3D_Vision_Interview_questions/Pasted%20image%2020250404105635.png)
-![Pasted image 20250404105516.png](3D_Vision_Interview_questions/Pasted%20image%2020250404105516.png)
+![Pasted image 20250404105553.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404105553.png)
+![Pasted image 20250404105635.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404105635.png)
+![Pasted image 20250404105516.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404105516.png)
 
-![Pasted image 20250404110321.png](3D_Vision_Interview_questions/Pasted%20image%2020250404110321.png)
+![Pasted image 20250404110321.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404110321.png)
 
 ### 22.  NLS, Gaussian Newton and LM
 
-![Pasted image 20250404140014.png](3D_Vision_Interview_questions/Pasted%20image%2020250404140014.png)
-![Pasted image 20250404140133.png](3D_Vision_Interview_questions/Pasted%20image%2020250404140133.png)
-![Pasted image 20250404140152.png](3D_Vision_Interview_questions/Pasted%20image%2020250404140152.png)
+![Pasted image 20250404140014.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404140014.png)
+![Pasted image 20250404140133.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404140133.png)
+![Pasted image 20250404140152.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404140152.png)
 
-![Pasted image 20250404140247.png](3D_Vision_Interview_questions/Pasted%20image%2020250404140247.png)
-![Pasted image 20250404140316.png](3D_Vision_Interview_questions/Pasted%20image%2020250404140316.png)
+![Pasted image 20250404140247.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404140247.png)
+![Pasted image 20250404140316.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404140316.png)
 **Jacobian matrix** contains all the **first-order partial derivatives**
 
-![Pasted image 20250404141407.png](3D_Vision_Interview_questions/Pasted%20image%2020250404141407.png)
-![Pasted image 20250404141454.png](3D_Vision_Interview_questions/Pasted%20image%2020250404141454.png)
+![Pasted image 20250404141407.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404141407.png)
+![Pasted image 20250404141454.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404141454.png)
 
-![Pasted image 20250404141526.png](3D_Vision_Interview_questions/Pasted%20image%2020250404141526.png)
-![Pasted image 20250404141546.png](3D_Vision_Interview_questions/Pasted%20image%2020250404141546.png)
+![Pasted image 20250404141526.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404141526.png)
+![Pasted image 20250404141546.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404141546.png)
 
 ### 23.  Camera Calibration
 
@@ -584,7 +584,7 @@ This is typically formulated as a **non-linear least squares optimization proble
 - **Minimization:** An optimization algorithm (like the Levenberg-Marquardt algorithm) iteratively adjusts the camera parameters to minimize the sum of the squared reprojection errors over all the calibration images and all the detected points.
 
 **4. Mathematical Formulation:**
-![Pasted image 20250404160027.png](3D_Vision_Interview_questions/Pasted%20image%2020250404160027.png)
+![Pasted image 20250404160027.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404160027.png)
 **In essence, camera calibration is about finding the set of camera parameters that best explains how 3D points in the world are mapped to 2D points in the image by minimizing the discrepancy between the predicted and observed image locations of known 3D points.** This process allows us to correct for lens distortions and to establish the relationship between the camera's coordinate system and the real world.
 
 In camera calibration, the **camera pose (extrinsic parameters)** and the **camera parameters (intrinsic parameters and distortion coefficients)** are typically optimized **together** in a process that often involves **iterative optimization**.
@@ -624,7 +624,7 @@ The LM algorithm adaptively adjusts a damping parameter (λ) to control the bala
 - **Small λ:** Favors Gauss-Newton (larger steps, faster convergence near the minimum).
 
 At each iteration of the LM algorithm:
-![Pasted image 20250404160253.png](3D_Vision_Interview_questions/Pasted%20image%2020250404160253.png)
+![Pasted image 20250404160253.png](../3D_Vision_Interview_questions/Pasted%20image%2020250404160253.png)
 
 **In summary, camera calibration optimizes camera pose and camera parameters simultaneously using iterative non-linear least squares methods like the Levenberg-Marquardt algorithm. This algorithm iteratively refines the parameter estimates by minimizing the reprojection error, considering the influence of both intrinsic and extrinsic parameters on the final image projection.**
 
