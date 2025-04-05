@@ -1,0 +1,13 @@
+# Ignore Obsidian settings
+.obsidian/cache
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/plugins/
+.obsidian/themes/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore attachments if not needed
+# attachments/
