@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "88aded89982d8ffa",
+    "type": "split",
+    "children": [
+      {
+        "id": "b7cf0875d89d7d7d",
+        "type": "tabs",
+        "dimension": 60.04335260115607,
+        "children": [
+          {
+            "id": "e6309600668ad081",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Math and Optimization Prep for Computer Vision Engineer Interview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Math and Optimization Prep for Computer Vision Engineer Interview"
+            }
+          }
+        ]
+      },
+      {
+        "id": "6dc9db276df284bd",
+        "type": "tabs",
+        "dimension": 39.956647398843934,
+        "children": [
+          {
+            "id": "f9c3da676571d97a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5a546a36cfd650cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "82dd7027b1380fa1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01c8182ff96cd3ca",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cd6ada2d734cf076",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "858c66c5146837f1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3958b3b03e40e220",
+    "type": "split",
+    "children": [
+      {
+        "id": "044e2473601180d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e9060b4d5402670",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "996bf0f2b5da8ba2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7ccb88e0d57cb95a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1c4c6d9b5aef47d7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f9c3da676571d97a",
+  "lastOpenFiles": [
+    "Math and Optimization Prep for Computer Vision Engineer Interview.md",
+    "Pasted image 20250404171938.png",
+    "Pasted image 20250404163839.png",
+    "Pasted image 20250404163707.png",
+    "Pasted image 20250404163634.png",
+    "Pasted image 20250404161646.png",
+    "Pasted image 20250404160253.png",
+    "Pasted image 20250404160027.png",
+    "Pasted image 20250404153051.png",
+    "Pasted image 20250404152529.png",
+    "Pasted image 20250404152510.png",
+    "Welcome.md"
+  ]
+}
