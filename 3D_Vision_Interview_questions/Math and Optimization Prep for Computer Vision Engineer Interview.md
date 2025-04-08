@@ -121,7 +121,25 @@ $$
 
 ****Answer:**** 3 for P3P, 4+ for RANSAC-PnP.
 
+  ![[Pasted image 20250406142746.png]]
   
+![[Pasted image 20250406143701.png]]
+![[Pasted image 20250406143737.png]]
+![[Pasted image 20250406144104.png]]
+
+![[Pasted image 20250406144501.png]]
+![[Pasted image 20250406145214.png]]
+![[Pasted image 20250406155826.png]]
+![[Pasted image 20250406160356.png]]
+
+3D-3D ICP求解R和T
+![[Pasted image 20250406160601.png]]
+![[Pasted image 20250406160620.png]]
+
+![[Pasted image 20250406160637.png]]
+![[Pasted image 20250406160818.png]]
+![[Pasted image 20250406160937.png]]
+
 
 ---
 
@@ -239,11 +257,11 @@ The structure of `ξ^` and the properties of the matrix exponential lead to this
 
 $$
 
-u = K [R|t] X
+u = K \pi([R|t] X)
 
 $$
 
-  
+  $$\pi(.)$$ is the distortion
 
 ---
 
@@ -264,7 +282,6 @@ T_{W}^{I}(t) = T_{IC} \cdot T_{W}^{C}(t)
 $$
 
   
-
 ---
 
   
@@ -297,27 +314,44 @@ $$
 
 ****Answer:**** Zhang’s method: detect corners, estimate homographies, solve for K.
 
-  
+
 
 ---
 
   
 
-### 10. Multi-Camera Calibration
+### 10. Multi-Camera+IMU Calibration
 
 ****Problem:**** How to calibrate multiple cameras?  
 
 ****Answer:**** Minimize joint reprojection error across all views.
 
-  
+  ![[Pasted image 20250405154426.png]]
+  ![[Pasted image 20250405154805.png]]
+  ![[Pasted image 20250405155249.png]]
+
+![[Pasted image 20250407155322.png]]
+![[Pasted image 20250407155344.png]]
+![[Pasted image 20250407155612.png]]
+The **relative motion between camera poses** (at k and k+1)  
+can be approximated by taking the **IMU motion** and expressing it in the **camera frame**.
+$$
+T^{\text{cam}_{k+1}}_{\text{cam}_k} \approx
+T^{\text{cam}}_{\text{imu}} \cdot 
+T^{\text{imu}_{k+1}}_{\text{imu}_{k}} \cdot 
+\left( T^{\text{cam}}_{\text{imu}} \right)^{-1}
+
+$$
+![[Pasted image 20250407160505.png]]
+
+
+![[Pasted image 20250407155644.png]]
 
 ---
 
   
 
 ## 🔁 Multi-Sensor Fusion / VIO
-
-  
 
 ### 11. VIO Measurement Model
 
@@ -335,23 +369,41 @@ $$
 r_{imu} = \hat{x}_{i+1} - f(\hat{x}_i, \hat{u}_{i \rightarrow i+1})
 $$
 
-  
+Visual:
+re-projection error.
+
+inertial:
+
+![[Pasted image 20250407112632.png]]
+  ![[Pasted image 20250407115254.png]]
+  left is from (7), right is the measurement. 
 
 ---
 
   
 
-### 12. IMU-Camera Fusion via EKF
+### 12. IMU-Camera Fusion via Tightly coupled VIO
 
 ****Problem:**** How to fuse IMU and camera in filtering?  
 
 ****Answer:**** EKF: IMU predicts, camera updates.
 
+  ![[Pasted image 20250407170411.png]]
+![[Pasted image 20250407170602.png]]
   
+  
+![[Pasted image 20250407170721.png]]
+
+![[Pasted image 20250407170739.png]]
+![[Pasted image 20250407170753.png]]
+
+![[Pasted image 20250407171035.png]]
+
+
+camera rate output：
+![[Pasted image 20250407171235.png]]
 
 ---
-
-  
 
 ### 13. IMU Preintegration
 
@@ -359,7 +411,31 @@ $$
 
 ****Answer:**** Avoids re-integrating during each iteration.
 
+About IMU:
+  ![[Pasted image 20250407112305.png]]
+  ![[Pasted image 20250407112448.png]]
+  ![[Pasted image 20250407112632.png]]
   
+### 公式（7）预积分公式（前向Eular法，不是中值法）
+  
+  ![[Pasted image 20250407114833.png]]
+  ![[Pasted image 20250407114953.png]]
+  ![[Pasted image 20250407115154.png]]
+ ![[Pasted image 20250407145741.png]]
+ ![[Pasted image 20250407150210.png]]优化变量是上述几个。每次滑窗优化会做多次bias调整，利用公式（12）不断进行参数更正。
+  ![[Pasted image 20250407115254.png]]
+  这个是IMU的预测值，要跟公式（7）获得的观测值相减做残差，作为优化变量之一。
+
+### 一阶连续协方差传播
+![[Pasted image 20250407132120.png]]
+
+![[Pasted image 20250407132138.png]]
+![[Pasted image 20250407132404.png]]
+
+### 中值积分法
+![[Pasted image 20250407141011.png]]
+![[Pasted image 20250407141021.png]]
+![[Pasted image 20250407141103.png]]
 
 ---
 
@@ -371,9 +447,10 @@ $$
 
 ****Answer:**** Align visual motion to IMU preintegration.
 
-  
+  ![[Pasted image 20250407163832.png]]
 
 ---
+
 
   
 
@@ -391,7 +468,6 @@ $$
 
 ## 🧮 Nonlinear Optimization
 
-  
 
 ### 16. Gauss-Newton vs LM
 
@@ -499,6 +575,7 @@ A skew-symmetric matrix transforms a cross product into a matrix multiplication.
 ![[Pasted image 20250404105516.png]]
 
 ![[Pasted image 20250404110321.png]]
+
 
 ### 22.  NLS, Gaussian Newton and LM
 
@@ -631,4 +708,45 @@ At each iteration of the LM algorithm:
 What's the dimension of J? (2mn)\*(4+d+6m) (m is the image numbers, n is the checkboard corners)
 N\*M checker board only contains (N-1)\*(M-1) corners.
 
-### 24.  Hand Eye Calibration
+### 24.  Epipolar constraint
+![[Pasted image 20250405152408.png]]
+![[Pasted image 20250405152432.png]]
+![[Pasted image 20250405152528.png]]
+![[Pasted image 20250405152729.png]]
+![[Pasted image 20250405153012.png]]
+
+### 25.  Essential Matrix
+![[Pasted image 20250405222240.png]]
+![[Pasted image 20250405225952.png]]
+![[Pasted image 20250405230009.png]]
+
+![[Pasted image 20250405224020.png]]
+![[Pasted image 20250405224001.png]]
+![[Pasted image 20250405224947.png]]
+![[Pasted image 20250405225105.png]]
+
+### 26. Homography
+![[Pasted image 20250405230132.png]]
+![[Pasted image 20250405230159.png]]
+
+![[Pasted image 20250405230345.png]]
+![[Pasted image 20250405230402.png]]
+
+### 27. Triangulation
+![[Pasted image 20250405233105.png]]
+![[Pasted image 20250405233329.png]]
+![[Pasted image 20250405233343.png]]
+
+### 28. Binocular rectified
+![[Pasted image 20250407232345.png]]
+![[Pasted image 20250407232408.png]]
+![[Pasted image 20250407232606.png]]
+
+### 29. ORBSLAM3
+![[Pasted image 20250407234806.png]]
+![[Pasted image 20250407234856.png]]
+![[Pasted image 20250407234945.png]]
+![[Pasted image 20250407235001.png]]
+
+![[Pasted image 20250407235611.png]]
+![[Pasted image 20250408091947.png]]

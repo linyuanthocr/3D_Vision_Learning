@@ -1,0 +1,13 @@
+# 忽略所有 Obsidian 设置
+**/.obsidian/
+**/.DS_Store
+
+# 忽略 vscode 编辑器临时文件
+.vscode/
+
+# 忽略 Python 字节码缓存
+__pycache__/
+
+# 忽略输出 markdown 文件目录
+github_markdown/
+
